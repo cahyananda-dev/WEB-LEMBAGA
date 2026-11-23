@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#174a37">
-  <meta name="description" content="Kenali SMA Cakrawala Nusantara, ruang tumbuh untuk belajar, berkarya, dan meraih masa depan.">
-  <title>SMA Cakrawala Nusantara | Tumbuh, Berkarya, Berdampak</title>
+  <meta name="theme-color" content="#315b7d">
+  <meta name="description" content="Kenali TK AISYIYAH KARANGASEM 02 PACIRAN, ruang tumbuh untuk belajar, berkarya, dan meraih masa depan.">
+  <title>TK AISYIYAH KARANGASEM 02 PACIRAN | Tumbuh, Berkarya, Berdampak</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --forest: #174a37;
-      --forest-deep: #103629;
-      --leaf: #d8ed9d;
-      --sun: #f0ad54;
-      --paper: #f7f6f0;
-      --ink: #1d2924;
-      --muted: #64736b;
+      --forest: #315b7d;
+      --forest-deep: #203f60;
+      --leaf: #b8d9ef;
+      --sun: #f3c88e;
+      --paper: #f5f8fc;
+      --ink: #243746;
+      --muted: #667d90;
       --white: #fff;
-      --line: #e4e9e3;
+      --line: #dde7ef;
       --serif: 'Playfair Display', Georgia, serif;
       --sans: 'DM Sans', 'Segoe UI', sans-serif;
     }
@@ -31,16 +31,16 @@
     button, input, select, textarea { font: inherit; }
     button, a { -webkit-tap-highlight-color: transparent; }
     .container { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
-    .topbar { height: 36px; display: flex; align-items: center; background: var(--forest-deep); color: #e3eee7; font-size: 11px; letter-spacing: .03em; }
+    .topbar { height: 36px; display: flex; align-items: center; background: var(--forest-deep); color: #e3edf5; font-size: 11px; letter-spacing: .03em; }
     .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
     .topbar p { margin: 0; }
     .topbar a { color: var(--leaf); font-weight: 700; }
     header { position: sticky; z-index: 20; top: 0; background: rgba(255,255,255,.97); border-bottom: 1px solid rgba(23,74,55,.08); }
     .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
     .brand { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; }
-    .brand-mark { width: 42px; height: 42px; display: grid; place-items: center; color: var(--forest); background: var(--leaf); border-radius: 50% 50% 50% 12px; font-size: 20px; font-weight: 700; }
-    .brand-copy { display: grid; gap: 2px; }
-    .brand-copy strong { font-family: var(--serif); font-size: 15px; line-height: 1.1; }
+    .brand-mark { width: 42px; height: 42px; display: block; flex-shrink: 0; object-fit: cover; background: var(--white); border: 1px solid var(--line); border-radius: 50%; }
+    .brand-copy { display: grid; gap: 2px; max-width: 230px; }
+    .brand-copy strong { font-family: var(--serif); font-size: 13px; line-height: 1.15; }
     .brand-copy small { color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
     .nav-links { display: flex; align-items: center; gap: 30px; color: #49564f; font-size: 12px; font-weight: 600; }
     .nav-links a { transition: color .2s ease; }
@@ -48,7 +48,7 @@
     .nav-cta { padding: 12px 17px; color: var(--white); background: var(--forest); border-radius: 4px; font-size: 11px; font-weight: 700; transition: background .2s, transform .2s; }
     .nav-cta:hover { background: var(--forest-deep); transform: translateY(-1px); }
     .menu-toggle { display: none; width: 42px; height: 42px; border: 1px solid var(--line); background: var(--white); border-radius: 4px; color: var(--forest); cursor: pointer; }
-    .hero { position: relative; min-height: 590px; display: flex; align-items: center; overflow: hidden; color: var(--white); background: #193d2d; }
+    .hero { position: relative; min-height: 590px; display: flex; align-items: center; overflow: hidden; color: var(--white); background: #315b7d; }
     .hero::before { position: absolute; inset: 0; content: ''; background: linear-gradient(90deg, rgba(13,40,29,.88) 0%, rgba(13,40,29,.71) 44%, rgba(13,40,29,.14) 100%), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2000&q=85') center 43%/cover; transform: scale(1.015); animation: arrive 1s ease-out both; }
     .hero::after { position: absolute; right: -85px; bottom: -180px; width: 470px; height: 470px; content: ''; border: 1px solid rgba(216,237,157,.25); border-radius: 50%; box-shadow: 0 0 0 40px rgba(216,237,157,.045), 0 0 0 80px rgba(216,237,157,.035); }
     .hero-content { position: relative; z-index: 1; width: min(1160px, calc(100% - 48px)); margin: 0 auto; padding: 90px 0 105px; animation: rise .75s .1s both; }
@@ -70,7 +70,7 @@
     .strip-item { display: flex; align-items: center; gap: 13px; padding: 0 26px; border-right: 1px solid var(--line); }
     .strip-item:first-child { padding-left: 0; }
     .strip-item:last-child { padding-right: 0; border-right: 0; }
-    .strip-icon { width: 38px; height: 38px; display: grid; place-items: center; flex-shrink: 0; color: var(--forest); background: #eff5e4; border-radius: 50%; font-size: 16px; }
+    .strip-icon { width: 38px; height: 38px; display: grid; place-items: center; flex-shrink: 0; color: var(--forest); background: #edf5fb; border-radius: 50%; font-size: 16px; }
     .strip-item strong { display: block; margin-bottom: 3px; font-family: var(--serif); font-size: 15px; }
     .strip-item span { color: var(--muted); font-size: 10px; }
     .section { padding: 100px 0; }
@@ -90,14 +90,14 @@
     .vm-number { color: #a4bd79; font-family: var(--serif); font-size: 20px; }
     .vm-item h3 { margin: 2px 0 6px; font-family: var(--serif); font-size: 16px; }
     .vm-item p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
-    .history-section { background: #edf1e8; }
+    .history-section { background: #edf4fa; }
     .history-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 80px; align-items: start; }
     .history-copy { position: sticky; top: 116px; }
     .history-copy .section-heading { margin-bottom: 25px; }
-    .history-copy .button { color: var(--forest); border-color: #b7c8ad; background: transparent; }
-    .timeline { border-left: 1px solid #bdcdb7; }
+    .history-copy .button { color: var(--forest); border-color: #abc8dc; background: transparent; }
+    .timeline { border-left: 1px solid #b8cddd; }
     .timeline-item { position: relative; padding: 0 0 34px 29px; }
-    .timeline-item::before { position: absolute; top: 5px; left: -5px; width: 9px; height: 9px; content: ''; background: var(--sun); border: 2px solid #edf1e8; border-radius: 50%; }
+    .timeline-item::before { position: absolute; top: 5px; left: -5px; width: 9px; height: 9px; content: ''; background: var(--sun); border: 2px solid #edf4fa; border-radius: 50%; }
     .timeline-item time { display: block; margin-bottom: 8px; color: #5d7e49; font-size: 11px; font-weight: 700; letter-spacing: .08em; }
     .timeline-item h3 { margin: 0 0 7px; font-family: var(--serif); font-size: 19px; }
     .timeline-item p { max-width: 430px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
@@ -109,11 +109,16 @@
     .achievement { position: relative; min-height: 310px; display: flex; flex-direction: column; justify-content: end; overflow: hidden; padding: 24px; color: var(--white); background: var(--forest); }
     .achievement img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
     .achievement:hover img { transform: scale(1.05); }
-    .achievement::after { position: absolute; inset: 0; content: ''; background: linear-gradient(0deg, rgba(13,38,28,.92), rgba(13,38,28,.03) 78%); }
+    .achievement::after { display: none; }
     .achievement-content { position: relative; z-index: 1; }
-    .achievement-tag { display: inline-flex; margin-bottom: 12px; padding: 6px 9px; color: #173c2b; background: var(--leaf); font-size: 9px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .achievement-tag { display: inline-flex; margin-bottom: 12px; padding: 6px 9px; color: #203f60; background: var(--leaf); font-size: 9px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
     .achievement h3 { max-width: 290px; margin-bottom: 7px; font-family: var(--serif); font-size: 20px; line-height: 1.25; }
     .achievement p { margin: 0; color: rgba(255,255,255,.75); font-size: 10px; }
+    .activity-section { background: #edf4fa; }
+    .activity-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .activity-photo { min-height: 300px; overflow: hidden; background: var(--white); border-radius: 4px; }
+    .activity-photo img { width: 100%; height: 300px; display: block; object-fit: cover; transition: transform .45s ease; }
+    .activity-photo:hover img { transform: scale(1.035); }
     .registration-section { padding: 94px 0; color: var(--white); background: var(--forest-deep); }
     .registration-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 80px; align-items: start; }
     .registration-copy .eyebrow { color: var(--leaf); }
@@ -129,13 +134,13 @@
     .field { display: grid; gap: 6px; }
     .field-wide { grid-column: 1 / -1; }
     .field label { color: #49564f; font-size: 10px; font-weight: 700; }
-    .field input, .field select, .field textarea { width: 100%; min-height: 42px; padding: 10px 11px; color: var(--ink); border: 1px solid #dfe5df; border-radius: 3px; outline: none; background: #fcfdfb; font-size: 11px; }
+    .field input, .field select, .field textarea { width: 100%; min-height: 42px; padding: 10px 11px; color: var(--ink); border: 1px solid #d9e4ed; border-radius: 3px; outline: none; background: #fbfdff; font-size: 11px; }
     .field textarea { min-height: 72px; resize: vertical; }
-    .field input:focus, .field select:focus, .field textarea:focus { border-color: #668d61; box-shadow: 0 0 0 3px rgba(102,141,97,.12); }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: #6e9cbf; box-shadow: 0 0 0 3px rgba(110,156,191,.12); }
     .form-submit { width: 100%; margin-top: 17px; color: var(--forest-deep); background: var(--leaf); cursor: pointer; }
-    .form-message { display: none; margin: 13px 0 0; padding: 11px; color: #174a37; background: #eff5e4; font-size: 11px; line-height: 1.6; }
+    .form-message { display: none; margin: 13px 0 0; padding: 11px; color: #315b7d; background: #edf5fb; font-size: 11px; line-height: 1.6; }
     .form-message.visible { display: block; }
-    footer { padding: 28px 0; color: #d3e1d7; background: #0c2c20; }
+    footer { padding: 28px 0; color: #d3e3ef; background: #183753; }
     .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
     .footer-brand { font-family: var(--serif); font-size: 14px; }
     .footer-copy { margin: 4px 0 0; color: #9fb3a5; font-size: 9px; }
@@ -174,6 +179,7 @@
       .achievement-head > p { max-width: 450px; margin: -20px 0 30px; }
       .achievement-grid { grid-template-columns: 1fr 1fr; }
       .achievement { min-height: 270px; }
+      .activity-grid { grid-template-columns: 1fr 1fr; }
       .registration-section { padding: 74px 0; }
     }
     @media (max-width: 520px) {
@@ -182,7 +188,7 @@
       .topbar-inner { gap: 8px; }
       .topbar-inner p { max-width: 210px; }
       .brand-mark { width: 38px; height: 38px; }
-      .brand-copy strong { font-size: 13px; }
+      .brand-copy strong { max-width: 190px; font-size: 11px; }
       .brand-copy small { font-size: 8px; }
       .hero { min-height: 555px; }
       .hero::before { background-image: linear-gradient(90deg, rgba(13,40,29,.88), rgba(13,40,29,.48)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80'); background-position: 55% center; }
@@ -201,6 +207,8 @@
       .photo-caption strong { font-size: 22px; }
       .achievement-grid { grid-template-columns: 1fr; gap: 12px; }
       .achievement { min-height: 280px; }
+      .activity-grid { grid-template-columns: 1fr; gap: 12px; }
+      .activity-photo, .activity-photo img { min-height: 280px; height: 280px; }
       .form-panel { padding: 21px 17px; }
       .form-grid { grid-template-columns: 1fr; }
       .field-wide { grid-column: auto; }
@@ -216,20 +224,21 @@
 <body>
   <div class="topbar">
     <div class="container topbar-inner">
-      <p>Jl. Pendidikan No. 12, Bandung · Senin–Jumat, 07.00–15.30</p>
+      <p>Jl. Ki Darsono Rt.04/Rw.04, Paciran · Senin–Jumat, 07.00–15.30</p>
       <a href="#pendaftaran">Penerimaan siswa baru 2026/2027 ↗</a>
     </div>
   </div>
   <header>
     <nav class="container nav" aria-label="Navigasi utama">
-      <a class="brand" href="#beranda" aria-label="SMA Cakrawala Nusantara, beranda">
-        <span class="brand-mark" aria-hidden="true">C</span>
-        <span class="brand-copy"><strong>SMA Cakrawala Nusantara</strong><small>Belajar · Bertumbuh · Berdampak</small></span>
+      <a class="brand" href="#beranda" aria-label="TK AISYIYAH KARANGASEM 02 PACIRAN, beranda">
+        <img class="brand-mark" src="logo.jpeg" alt="Logo TK AISYIYAH KARANGASEM 02 PACIRAN">
+        <span class="brand-copy"><strong>TK AISYIYAH KARANGASEM 02 PACIRAN</strong><small>Belajar · Bertumbuh · Berdampak</small></span>
       </a>
       <div class="nav-links" id="navLinks">
         <a href="#beranda">Beranda</a>
         <a href="#sejarah">Sejarah</a>
         <a href="#prestasi">Prestasi</a>
+        <a href="#kegiatan">Kegiatan</a>
         <a href="#pendaftaran">Pendaftaran</a>
       </div>
       <a class="nav-cta" href="#pendaftaran">Daftar Sekarang <span aria-hidden="true">↗</span></a>
@@ -238,9 +247,9 @@
   </header>
 
   <main>
-    <section class="hero" id="beranda" aria-label="SMA Cakrawala Nusantara">
+    <section class="hero" id="beranda" aria-label="TK AISYIYAH KARANGASEM 02 PACIRAN">
       <div class="hero-content">
-        <span class="eyebrow">Sekolah Menengah Atas · Bandung</span>
+        <span class="eyebrow">Taman Kanak-Kanak · Paciran</span>
         <h1>Ruang untuk tumbuh,<br><em>berani bermimpi.</em></h1>
         <p class="hero-copy">Kami percaya setiap anak punya cahaya yang berbeda. Di sini, murid dan guru belajar bersama untuk mengenali potensi, berkarya dengan percaya diri, dan memberi arti bagi sekitar.</p>
         <div class="hero-actions">
@@ -262,18 +271,18 @@
     <section class="section vision-section" id="visi-misi">
       <div class="container vision-grid">
         <div class="vision-photo reveal">
-          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1100&q=85" alt="Murid belajar bersama guru di ruang kelas yang terang" loading="lazy">
-          <div class="photo-caption"><strong>1.240+</strong><span>Murid belajar dan berkarya bersama</span></div>
+          <img src="rg.jpeg" alt="Murid belajar bersama guru di TK AISYIYAH KARANGASEM 02 PACIRAN" loading="lazy">
+          <div class="photo-caption"><strong>49</strong><span>Murid belajar dan berkarya bersama</span></div>
         </div>
         <div class="vision-content reveal">
           <div class="section-heading">
-            <span class="eyebrow">Arah dan tujuan</span>
-            <h2>Mendidik dengan hati, menyiapkan masa depan.</h2>
-            <p>Pendidikan bukan hanya tentang apa yang diketahui, tetapi juga tentang siapa kita dan bagaimana kita berkontribusi.</p>
+            <span class="eyebrow">Profil lembaga</span>
+            <h2>Bertumbuh dalam keluarga Aisyiyah sejak 1983.</h2>
+            <p>TK AISYIYAH KARANGASEM 02 PACIRAN melayani anak usia dini dengan pengelolaan sekolah swasta milik sendiri dan telah terakreditasi A.</p>
           </div>
-          <div class="vm-item"><span class="vm-number">01</span><div><h3>Visi</h3><p>Menjadi komunitas belajar yang unggul, berkarakter, dan berwawasan global tanpa kehilangan kepedulian pada sesama dan lingkungan.</p></div></div>
-          <div class="vm-item"><span class="vm-number">02</span><div><h3>Misi</h3><p>Menghadirkan pembelajaran yang aktif dan inklusif, menumbuhkan integritas serta kreativitas, dan membuka ruang bagi setiap murid untuk berkembang.</p></div></div>
-          <div class="vm-item"><span class="vm-number">03</span><div><h3>Nilai kami</h3><p>Rasa ingin tahu, keberanian mencoba, saling menghargai, dan tanggung jawab atas setiap pilihan.</p></div></div>
+          <div class="vm-item"><span class="vm-number">01</span><div><h3>Identitas lembaga</h3><p>NPSN 20567426. TK berstatus swasta, terakreditasi A, dan berdiri pada 18 Juli 1983.</p></div></div>
+          <div class="vm-item"><span class="vm-number">02</span><div><h3>Pimpinan lembaga</h3><p>Kepala sekolah: Maskhuba Imaniyah, S.Pd.I. Sekolah bertempat di Jl. Ki Darsono, Rt.04/Rw.04, Kecamatan Paciran, Lamongan 62264.</p></div></div>
+          <div class="vm-item"><span class="vm-number">03</span><div><h3>Jejak Aisyiyah</h3><p>Berdasarkan sejarah lembaga, pendidikan Aisyiyah tumbuh dari organisasi perempuan Muhammadiyah dan memperkenalkan pendidikan anak usia pra-sekolah sejak 1919.</p></div></div>
         </div>
       </div>
     </section>
@@ -282,17 +291,17 @@
       <div class="container history-grid">
         <div class="history-copy reveal">
           <div class="section-heading">
-            <span class="eyebrow">Perjalanan kami</span>
-            <h2>Berawal dari mimpi, tumbuh bersama kota.</h2>
-            <p>SMA Cakrawala Nusantara lahir dari keyakinan sederhana: pendidikan berkualitas seharusnya memberi kesempatan kepada setiap anak untuk menemukan jalannya sendiri.</p>
+            <span class="eyebrow">Perjalanan lembaga</span>
+            <h2>Sejarah lahir dan tumbuhnya pendidikan Aisyiyah.</h2>
+            <p>Profil ini merangkum perjalanan Aisyiyah sebagai organisasi perempuan Muhammadiyah dan berdirinya TK AISYIYAH KARANGASEM 02 PACIRAN.</p>
           </div>
-          <a class="button" href="#prestasi">Lihat perjalanan prestasi <span aria-hidden="true">→</span></a>
+          <a class="button" href="#prestasi">Lihat kegiatan lembaga <span aria-hidden="true">→</span></a>
         </div>
         <div class="timeline reveal" aria-label="Linimasa sejarah sekolah">
-          <article class="timeline-item"><time datetime="1998">1998</time><h3>Langkah pertama</h3><p>Didirikan oleh para pendidik dan tokoh masyarakat yang ingin menghadirkan sekolah dengan suasana belajar yang lebih dekat dan terbuka.</p></article>
-          <article class="timeline-item"><time datetime="2006">2006</time><h3>Kampus baru, semangat baru</h3><p>Berpindah ke lingkungan sekolah yang lebih luas dengan ruang praktik, perpustakaan, dan lapangan terbuka untuk seluruh murid.</p></article>
-          <article class="timeline-item"><time datetime="2015">2015</time><h3>Belajar melampaui kelas</h3><p>Program kolaborasi, kegiatan sosial, dan klub minat mulai menjadi bagian penting dari pengalaman belajar murid.</p></article>
-          <article class="timeline-item"><time datetime="2024">2024–kini</time><h3>Terus bertumbuh bersama</h3><p>Memperkuat pembelajaran digital, kepedulian lingkungan, dan kemitraan agar murid siap menghadapi dunia yang terus berubah.</p></article>
+          <article class="timeline-item"><time datetime="1917">1917</time><h3>Aisyiyah berdiri</h3><p>Aisyiyah didirikan di Yogyakarta pada 19 Mei 1917 Masehi, bertepatan dengan 27 Rajab 1335 Hijriyah, sebagai komponen perempuan dalam Persyarikatan Muhammadiyah.</p></article>
+          <article class="timeline-item"><time datetime="1919">1919</time><h3>Pendidikan anak usia dini berkembang</h3><p>Aisyiyah mulai menyelenggarakan pendidikan anak usia pra-sekolah pada tahun 1919 dengan nama Bustanul Athfal.</p></article>
+          <article class="timeline-item"><time datetime="1983-07-18">18 Juli 1983</time><h3>TK berdiri di Paciran</h3><p>TK AISYIYAH KARANGASEM 02 PACIRAN berdiri di Kecamatan Paciran, Kabupaten Lamongan.</p></article>
+          <article class="timeline-item"><time datetime="2026">Saat ini</time><h3>Berstatus terakreditasi A</h3><p>Lembaga berstatus sekolah swasta milik sendiri dengan NPSN 20567426 dan dipimpin oleh Maskhuba Imaniyah, S.Pd.I.</p></article>
         </div>
       </div>
     </section>
@@ -304,9 +313,24 @@
           <p>Ruang untuk berkembang tersedia bagi setiap murid, di dalam kelas maupun di luar kelas.</p>
         </div>
         <div class="achievement-grid">
-          <article class="achievement reveal"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80" alt="Siswa merayakan kelulusan dan prestasi" loading="lazy"><div class="achievement-content"><span class="achievement-tag">Akademik · 2025</span><h3>Finalis Olimpiade Sains Nasional</h3><p>Bidang Matematika tingkat provinsi</p></div></article>
-          <article class="achievement reveal"><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=80" alt="Karya seni dan kreativitas murid" loading="lazy"><div class="achievement-content"><span class="achievement-tag">Kreativitas · 2025</span><h3>Juara Festival Film Pelajar</h3><p>Kategori film pendek tingkat kota</p></div></article>
-          <article class="achievement reveal"><img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80" alt="Tim olahraga sekolah berlatih bersama" loading="lazy"><div class="achievement-content"><span class="achievement-tag">Olahraga · 2024</span><h3>Juara Liga Basket Pelajar</h3><p>Kompetisi antarsekolah se-Bandung Raya</p></div></article>
+          <article class="achievement reveal"><img src="hihu.jpeg" alt="Prestasi TK AISYIYAH KARANGASEM 02 PACIRAN" loading="lazy"></article>
+          <article class="achievement reveal"><img src="seto.jpeg" alt="Prestasi TK AISYIYAH KARANGASEM 02 PACIRAN" loading="lazy"></article>
+          <article class="achievement reveal"><img src="putu.jpeg" alt="Prestasi TK AISYIYAH KARANGASEM 02 PACIRAN" loading="lazy"></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section activity-section" id="kegiatan">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Kegiatan anak</span>
+          <h2>Belajar sambil bermain dan berkarya.</h2>
+          <p>Potret kegiatan sehari-hari anak-anak dalam suasana belajar yang hangat, aktif, dan menyenangkan.</p>
+        </div>
+        <div class="activity-grid">
+          <figure class="activity-photo reveal"><img src="titut.jpeg" alt="Kegiatan anak TK AISYIYAH KARANGASEM 02 PACIRAN" loading="lazy"></figure>
+          <figure class="activity-photo reveal"><img src="titut.jpeg" alt="Kegiatan anak TK AISYIYAH KARANGASEM 02 PACIRAN" loading="lazy"></figure>
+          <figure class="activity-photo reveal"><img src="titut.jpeg" alt="Kegiatan anak TK AISYIYAH KARANGASEM 02 PACIRAN" loading="lazy"></figure>
         </div>
       </div>
     </section>
@@ -318,9 +342,9 @@
           <h2>Mulai cerita barumu bersama kami.</h2>
           <p>Kenali lebih dekat lingkungan belajar kami. Isi formulir minat, dan tim penerimaan murid akan menghubungi untuk berbagi informasi selanjutnya.</p>
           <div class="admission-details">
-            <div class="admission-detail"><span class="detail-symbol" aria-hidden="true">⌖</span>Jl. Pendidikan No. 12, Bandung</div>
+            <div class="admission-detail"><span class="detail-symbol" aria-hidden="true">⌖</span>Jl. Ki Darsono Rt.04/Rw.04, Paciran 62264</div>
             <div class="admission-detail"><span class="detail-symbol" aria-hidden="true">◷</span>Senin–Jumat, pukul 08.00–15.00 WIB</div>
-            <div class="admission-detail"><span class="detail-symbol" aria-hidden="true">✉</span>penerimaan@cakrawalanusantara.sch.id</div>
+            <div class="admission-detail"><span class="detail-symbol" aria-hidden="true">✉</span>tkaisyiyahkarangasem02@gmail.com</div>
           </div>
         </div>
         <div class="form-panel reveal">
@@ -345,8 +369,8 @@
 
   <footer>
     <div class="container footer-inner">
-      <div><div class="footer-brand">SMA Cakrawala Nusantara</div><p class="footer-copy">© 2026 SMA Cakrawala Nusantara. Belajar, bertumbuh, berdampak.</p></div>
-      <div class="footer-links"><a href="#beranda">Beranda</a><a href="#sejarah">Sejarah</a><a href="#prestasi">Prestasi</a><a href="#pendaftaran">Pendaftaran</a></div>
+      <div><div class="footer-brand">TK AISYIYAH KARANGASEM 02 PACIRAN</div><p class="footer-copy">© 2026 TK AISYIYAH KARANGASEM 02 PACIRAN. Belajar, bertumbuh, berdampak.</p></div>
+      <div class="footer-links"><a href="#beranda">Beranda</a><a href="#sejarah">Sejarah</a><a href="#prestasi">Prestasi</a><a href="#kegiatan">Kegiatan</a><a href="#pendaftaran">Pendaftaran</a></div>
     </div>
   </footer>
   <script>
