@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174a37">
+  <meta name="description" content="Kenali SMA Cakrawala Nusantara, ruang tumbuh untuk belajar, berkarya, dan meraih masa depan.">
+  <title>SMA Cakrawala Nusantara | Tumbuh, Berkarya, Berdampak</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #174a37;
+      --forest-deep: #103629;
+      --leaf: #d8ed9d;
+      --sun: #f0ad54;
+      --paper: #f7f6f0;
+      --ink: #1d2924;
+      --muted: #64736b;
+      --white: #fff;
+      --line: #e4e9e3;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'DM Sans', 'Segoe UI', sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .container { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
+    .topbar { height: 36px; display: flex; align-items: center; background: var(--forest-deep); color: #e3eee7; font-size: 11px; letter-spacing: .03em; }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .topbar p { margin: 0; }
+    .topbar a { color: var(--leaf); font-weight: 700; }
+    header { position: sticky; z-index: 20; top: 0; background: rgba(255,255,255,.97); border-bottom: 1px solid rgba(23,74,55,.08); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; }
+    .brand-mark { width: 42px; height: 42px; display: grid; place-items: center; color: var(--forest); background: var(--leaf); border-radius: 50% 50% 50% 12px; font-size: 20px; font-weight: 700; }
+    .brand-copy { display: grid; gap: 2px; }
+    .brand-copy strong { font-family: var(--serif); font-size: 15px; line-height: 1.1; }
+    .brand-copy small { color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 30px; color: #49564f; font-size: 12px; font-weight: 600; }
+    .nav-links a { transition: color .2s ease; }
+    .nav-links a:hover { color: var(--forest); }
+    .nav-cta { padding: 12px 17px; color: var(--white); background: var(--forest); border-radius: 4px; font-size: 11px; font-weight: 700; transition: background .2s, transform .2s; }
+    .nav-cta:hover { background: var(--forest-deep); transform: translateY(-1px); }
+    .menu-toggle { display: none; width: 42px; height: 42px; border: 1px solid var(--line); background: var(--white); border-radius: 4px; color: var(--forest); cursor: pointer; }
+    .hero { position: relative; min-height: 590px; display: flex; align-items: center; overflow: hidden; color: var(--white); background: #193d2d; }
+    .hero::before { position: absolute; inset: 0; content: ''; background: linear-gradient(90deg, rgba(13,40,29,.88) 0%, rgba(13,40,29,.71) 44%, rgba(13,40,29,.14) 100%), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2000&q=85') center 43%/cover; transform: scale(1.015); animation: arrive 1s ease-out both; }
+    .hero::after { position: absolute; right: -85px; bottom: -180px; width: 470px; height: 470px; content: ''; border: 1px solid rgba(216,237,157,.25); border-radius: 50%; box-shadow: 0 0 0 40px rgba(216,237,157,.045), 0 0 0 80px rgba(216,237,157,.035); }
+    .hero-content { position: relative; z-index: 1; width: min(1160px, calc(100% - 48px)); margin: 0 auto; padding: 90px 0 105px; animation: rise .75s .1s both; }
+    .eyebrow { display: flex; align-items: center; gap: 9px; color: #dff3ad; font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    .eyebrow::before { width: 25px; height: 1px; content: ''; background: currentColor; }
+    h1, h2, h3, p { margin-top: 0; }
+    .hero h1 { max-width: 650px; margin: 20px 0 19px; font-family: var(--serif); font-size: clamp(42px, 5.3vw, 68px); font-weight: 600; line-height: 1.08; }
+    .hero h1 em { color: var(--leaf); font-style: normal; }
+    .hero-copy { max-width: 470px; margin-bottom: 29px; color: rgba(255,255,255,.83); font-size: 14px; line-height: 1.85; }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 13px; }
+    .button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 0 19px; border: 1px solid transparent; border-radius: 3px; font-size: 11px; font-weight: 700; transition: transform .2s, background .2s; }
+    .button:hover { transform: translateY(-2px); }
+    .button-light { color: var(--forest-deep); background: var(--leaf); }
+    .button-outline { color: var(--white); border-color: rgba(255,255,255,.5); background: rgba(255,255,255,.04); }
+    .hero-note { position: absolute; right: 0; bottom: 43px; display: flex; align-items: center; gap: 11px; color: rgba(255,255,255,.82); font-size: 10px; }
+    .note-dot { width: 8px; height: 8px; background: var(--sun); border-radius: 50%; }
+    .intro-strip { position: relative; z-index: 2; margin-top: -28px; }
+    .strip-inner { display: grid; grid-template-columns: repeat(3, 1fr); padding: 25px 31px; background: var(--white); box-shadow: 0 10px 38px rgba(24,56,39,.08); }
+    .strip-item { display: flex; align-items: center; gap: 13px; padding: 0 26px; border-right: 1px solid var(--line); }
+    .strip-item:first-child { padding-left: 0; }
+    .strip-item:last-child { padding-right: 0; border-right: 0; }
+    .strip-icon { width: 38px; height: 38px; display: grid; place-items: center; flex-shrink: 0; color: var(--forest); background: #eff5e4; border-radius: 50%; font-size: 16px; }
+    .strip-item strong { display: block; margin-bottom: 3px; font-family: var(--serif); font-size: 15px; }
+    .strip-item span { color: var(--muted); font-size: 10px; }
+    .section { padding: 100px 0; }
+    .section-heading { max-width: 590px; margin-bottom: 43px; }
+    .section-heading .eyebrow { color: #62844e; }
+    .section-heading h2 { margin: 14px 0 12px; font-family: var(--serif); font-size: clamp(32px, 4vw, 45px); font-weight: 600; line-height: 1.15; }
+    .section-heading p { max-width: 510px; margin-bottom: 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .vision-section { padding-top: 91px; }
+    .vision-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 76px; align-items: center; }
+    .vision-photo { position: relative; min-height: 440px; }
+    .vision-photo img { width: 100%; height: 440px; display: block; object-fit: cover; border-radius: 4px; }
+    .photo-caption { position: absolute; right: -22px; bottom: 24px; width: 180px; padding: 17px 19px; color: var(--white); background: var(--forest); box-shadow: 0 10px 26px rgba(16,54,41,.19); }
+    .photo-caption strong { display: block; margin-bottom: 5px; font-family: var(--serif); font-size: 25px; }
+    .photo-caption span { color: #dce8df; font-size: 10px; }
+    .vision-content .section-heading { margin-bottom: 24px; }
+    .vm-item { display: grid; grid-template-columns: 43px 1fr; gap: 14px; padding: 18px 0; border-top: 1px solid var(--line); }
+    .vm-number { color: #a4bd79; font-family: var(--serif); font-size: 20px; }
+    .vm-item h3 { margin: 2px 0 6px; font-family: var(--serif); font-size: 16px; }
+    .vm-item p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+    .history-section { background: #edf1e8; }
+    .history-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 80px; align-items: start; }
+    .history-copy { position: sticky; top: 116px; }
+    .history-copy .section-heading { margin-bottom: 25px; }
+    .history-copy .button { color: var(--forest); border-color: #b7c8ad; background: transparent; }
+    .timeline { border-left: 1px solid #bdcdb7; }
+    .timeline-item { position: relative; padding: 0 0 34px 29px; }
+    .timeline-item::before { position: absolute; top: 5px; left: -5px; width: 9px; height: 9px; content: ''; background: var(--sun); border: 2px solid #edf1e8; border-radius: 50%; }
+    .timeline-item time { display: block; margin-bottom: 8px; color: #5d7e49; font-size: 11px; font-weight: 700; letter-spacing: .08em; }
+    .timeline-item h3 { margin: 0 0 7px; font-family: var(--serif); font-size: 19px; }
+    .timeline-item p { max-width: 430px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    .achievements-section { background: var(--white); }
+    .achievement-head { display: flex; justify-content: space-between; align-items: end; gap: 30px; }
+    .achievement-head .section-heading { margin-bottom: 38px; }
+    .achievement-head > p { max-width: 240px; margin: 0 0 43px; color: var(--muted); font-size: 11px; line-height: 1.8; }
+    .achievement-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .achievement { position: relative; min-height: 310px; display: flex; flex-direction: column; justify-content: end; overflow: hidden; padding: 24px; color: var(--white); background: var(--forest); }
+    .achievement img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+    .achievement:hover img { transform: scale(1.05); }
+    .achievement::after { position: absolute; inset: 0; content: ''; background: linear-gradient(0deg, rgba(13,38,28,.92), rgba(13,38,28,.03) 78%); }
+    .achievement-content { position: relative; z-index: 1; }
+    .achievement-tag { display: inline-flex; margin-bottom: 12px; padding: 6px 9px; color: #173c2b; background: var(--leaf); font-size: 9px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .achievement h3 { max-width: 290px; margin-bottom: 7px; font-family: var(--serif); font-size: 20px; line-height: 1.25; }
+    .achievement p { margin: 0; color: rgba(255,255,255,.75); font-size: 10px; }
+    .registration-section { padding: 94px 0; color: var(--white); background: var(--forest-deep); }
+    .registration-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 80px; align-items: start; }
+    .registration-copy .eyebrow { color: var(--leaf); }
+    .registration-copy h2 { margin: 16px 0; font-family: var(--serif); font-size: clamp(33px, 4vw, 46px); font-weight: 600; line-height: 1.14; }
+    .registration-copy > p { max-width: 390px; color: #ccdbd0; font-size: 12px; line-height: 1.85; }
+    .admission-details { display: grid; gap: 14px; margin-top: 29px; }
+    .admission-detail { display: flex; align-items: center; gap: 12px; color: #e3eee7; font-size: 11px; }
+    .detail-symbol { width: 29px; height: 29px; display: grid; place-items: center; color: var(--leaf); border: 1px solid rgba(216,237,157,.35); border-radius: 50%; }
+    .form-panel { padding: 28px; color: var(--ink); background: var(--white); border-radius: 4px; }
+    .form-panel h3 { margin-bottom: 5px; font-family: var(--serif); font-size: 21px; }
+    .form-panel > p { margin-bottom: 22px; color: var(--muted); font-size: 10px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .field { display: grid; gap: 6px; }
+    .field-wide { grid-column: 1 / -1; }
+    .field label { color: #49564f; font-size: 10px; font-weight: 700; }
+    .field input, .field select, .field textarea { width: 100%; min-height: 42px; padding: 10px 11px; color: var(--ink); border: 1px solid #dfe5df; border-radius: 3px; outline: none; background: #fcfdfb; font-size: 11px; }
+    .field textarea { min-height: 72px; resize: vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: #668d61; box-shadow: 0 0 0 3px rgba(102,141,97,.12); }
+    .form-submit { width: 100%; margin-top: 17px; color: var(--forest-deep); background: var(--leaf); cursor: pointer; }
+    .form-message { display: none; margin: 13px 0 0; padding: 11px; color: #174a37; background: #eff5e4; font-size: 11px; line-height: 1.6; }
+    .form-message.visible { display: block; }
+    footer { padding: 28px 0; color: #d3e1d7; background: #0c2c20; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .footer-brand { font-family: var(--serif); font-size: 14px; }
+    .footer-copy { margin: 4px 0 0; color: #9fb3a5; font-size: 9px; }
+    .footer-links { display: flex; gap: 20px; font-size: 10px; }
+    .footer-links a:hover { color: var(--leaf); }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.in-view { opacity: 1; transform: translateY(0); }
+    @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes arrive { from { transform: scale(1.055); } to { transform: scale(1.015); } }
+
+    @media (max-width: 800px) {
+      .container { width: min(100% - 36px, 650px); }
+      .nav { min-height: 68px; }
+      .menu-toggle { display: grid; place-items: center; }
+      .nav-cta { display: none; }
+      .nav-links { position: absolute; top: 100%; left: 0; right: 0; display: none; align-items: stretch; gap: 0; padding: 8px 18px 16px; background: var(--white); border-top: 1px solid var(--line); box-shadow: 0 14px 20px rgba(20,50,35,.08); }
+      .nav-links.open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 12px 5px; border-bottom: 1px solid #edf0ed; }
+      .hero { min-height: 560px; }
+      .hero::before { background-position: 54% center; }
+      .hero-content { width: min(100% - 36px, 650px); padding: 76px 0 95px; }
+      .hero h1 { max-width: 560px; font-size: clamp(40px, 9vw, 58px); }
+      .hero-copy { max-width: 430px; }
+      .hero-note { right: 0; bottom: 26px; }
+      .intro-strip { margin-top: 0; background: var(--white); }
+      .strip-inner { width: min(100% - 36px, 650px); grid-template-columns: 1fr; gap: 0; margin: auto; padding: 10px 0; box-shadow: none; }
+      .strip-item, .strip-item:first-child, .strip-item:last-child { padding: 15px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+      .strip-item:last-child { border-bottom: 0; }
+      .section { padding: 76px 0; }
+      .vision-grid, .history-grid, .registration-grid { grid-template-columns: 1fr; gap: 42px; }
+      .vision-photo { min-height: 330px; }
+      .vision-photo img { height: 330px; }
+      .photo-caption { right: -7px; }
+      .history-copy { position: static; }
+      .achievement-head { display: block; }
+      .achievement-head > p { max-width: 450px; margin: -20px 0 30px; }
+      .achievement-grid { grid-template-columns: 1fr 1fr; }
+      .achievement { min-height: 270px; }
+      .registration-section { padding: 74px 0; }
+    }
+    @media (max-width: 520px) {
+      .container { width: calc(100% - 32px); }
+      .topbar { height: auto; min-height: 34px; padding: 7px 0; font-size: 9px; }
+      .topbar-inner { gap: 8px; }
+      .topbar-inner p { max-width: 210px; }
+      .brand-mark { width: 38px; height: 38px; }
+      .brand-copy strong { font-size: 13px; }
+      .brand-copy small { font-size: 8px; }
+      .hero { min-height: 555px; }
+      .hero::before { background-image: linear-gradient(90deg, rgba(13,40,29,.88), rgba(13,40,29,.48)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80'); background-position: 55% center; }
+      .hero-content { width: calc(100% - 36px); padding: 68px 0 90px; }
+      .hero h1 { margin-top: 17px; font-size: 43px; }
+      .hero-copy { font-size: 12px; }
+      .button { min-height: 43px; padding-inline: 14px; font-size: 10px; }
+      .hero-note { left: 0; right: auto; font-size: 9px; }
+      .strip-inner { width: calc(100% - 36px); }
+      .section { padding: 65px 0; }
+      .section-heading { margin-bottom: 31px; }
+      .section-heading h2 { font-size: 34px; }
+      .vision-photo { min-height: 275px; }
+      .vision-photo img { height: 275px; }
+      .photo-caption { width: 150px; padding: 13px; }
+      .photo-caption strong { font-size: 22px; }
+      .achievement-grid { grid-template-columns: 1fr; gap: 12px; }
+      .achievement { min-height: 280px; }
+      .form-panel { padding: 21px 17px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field-wide { grid-column: auto; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+      .footer-links { flex-wrap: wrap; gap: 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <p>Jl. Pendidikan No. 12, Bandung · Senin–Jumat, 07.00–15.30</p>
+      <a href="#pendaftaran">Penerimaan siswa baru 2026/2027 ↗</a>
+    </div>
+  </div>
+  <header>
+    <nav class="container nav" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda" aria-label="SMA Cakrawala Nusantara, beranda">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <span class="brand-copy"><strong>SMA Cakrawala Nusantara</strong><small>Belajar · Bertumbuh · Berdampak</small></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#beranda">Beranda</a>
+        <a href="#sejarah">Sejarah</a>
+        <a href="#prestasi">Prestasi</a>
+        <a href="#pendaftaran">Pendaftaran</a>
+      </div>
+      <a class="nav-cta" href="#pendaftaran">Daftar Sekarang <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka navigasi" aria-expanded="false" aria-controls="navLinks"><span aria-hidden="true">☰</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda" aria-label="SMA Cakrawala Nusantara">
+      <div class="hero-content">
+        <span class="eyebrow">Sekolah Menengah Atas · Bandung</span>
+        <h1>Ruang untuk tumbuh,<br><em>berani bermimpi.</em></h1>
+        <p class="hero-copy">Kami percaya setiap anak punya cahaya yang berbeda. Di sini, murid dan guru belajar bersama untuk mengenali potensi, berkarya dengan percaya diri, dan memberi arti bagi sekitar.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#pendaftaran">Jelajahi pendaftaran <span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="#sejarah">Kenali sekolah kami</a>
+        </div>
+        <div class="hero-note"><span class="note-dot"></span>Tempat belajar yang terasa seperti rumah</div>
+      </div>
+    </section>
+
+    <div class="intro-strip" aria-label="Tentang sekolah">
+      <div class="strip-inner">
+        <div class="strip-item"><span class="strip-icon" aria-hidden="true">✳</span><div><strong>Belajar bermakna</strong><span>Kurikulum yang dekat dengan kehidupan</span></div></div>
+        <div class="strip-item"><span class="strip-icon" aria-hidden="true">⌂</span><div><strong>Lingkungan suportif</strong><span>Ruang aman untuk mencoba dan bertanya</span></div></div>
+        <div class="strip-item"><span class="strip-icon" aria-hidden="true">↗</span><div><strong>Potensi tanpa batas</strong><span>Akademik, kreativitas, dan karakter</span></div></div>
+      </div>
+    </div>
+
+    <section class="section vision-section" id="visi-misi">
+      <div class="container vision-grid">
+        <div class="vision-photo reveal">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1100&q=85" alt="Murid belajar bersama guru di ruang kelas yang terang" loading="lazy">
+          <div class="photo-caption"><strong>1.240+</strong><span>Murid belajar dan berkarya bersama</span></div>
+        </div>
+        <div class="vision-content reveal">
+          <div class="section-heading">
+            <span class="eyebrow">Arah dan tujuan</span>
+            <h2>Mendidik dengan hati, menyiapkan masa depan.</h2>
+            <p>Pendidikan bukan hanya tentang apa yang diketahui, tetapi juga tentang siapa kita dan bagaimana kita berkontribusi.</p>
+          </div>
+          <div class="vm-item"><span class="vm-number">01</span><div><h3>Visi</h3><p>Menjadi komunitas belajar yang unggul, berkarakter, dan berwawasan global tanpa kehilangan kepedulian pada sesama dan lingkungan.</p></div></div>
+          <div class="vm-item"><span class="vm-number">02</span><div><h3>Misi</h3><p>Menghadirkan pembelajaran yang aktif dan inklusif, menumbuhkan integritas serta kreativitas, dan membuka ruang bagi setiap murid untuk berkembang.</p></div></div>
+          <div class="vm-item"><span class="vm-number">03</span><div><h3>Nilai kami</h3><p>Rasa ingin tahu, keberanian mencoba, saling menghargai, dan tanggung jawab atas setiap pilihan.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section history-section" id="sejarah">
+      <div class="container history-grid">
+        <div class="history-copy reveal">
+          <div class="section-heading">
+            <span class="eyebrow">Perjalanan kami</span>
+            <h2>Berawal dari mimpi, tumbuh bersama kota.</h2>
+            <p>SMA Cakrawala Nusantara lahir dari keyakinan sederhana: pendidikan berkualitas seharusnya memberi kesempatan kepada setiap anak untuk menemukan jalannya sendiri.</p>
+          </div>
+          <a class="button" href="#prestasi">Lihat perjalanan prestasi <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="timeline reveal" aria-label="Linimasa sejarah sekolah">
+          <article class="timeline-item"><time datetime="1998">1998</time><h3>Langkah pertama</h3><p>Didirikan oleh para pendidik dan tokoh masyarakat yang ingin menghadirkan sekolah dengan suasana belajar yang lebih dekat dan terbuka.</p></article>
+          <article class="timeline-item"><time datetime="2006">2006</time><h3>Kampus baru, semangat baru</h3><p>Berpindah ke lingkungan sekolah yang lebih luas dengan ruang praktik, perpustakaan, dan lapangan terbuka untuk seluruh murid.</p></article>
+          <article class="timeline-item"><time datetime="2015">2015</time><h3>Belajar melampaui kelas</h3><p>Program kolaborasi, kegiatan sosial, dan klub minat mulai menjadi bagian penting dari pengalaman belajar murid.</p></article>
+          <article class="timeline-item"><time datetime="2024">2024–kini</time><h3>Terus bertumbuh bersama</h3><p>Memperkuat pembelajaran digital, kepedulian lingkungan, dan kemitraan agar murid siap menghadapi dunia yang terus berubah.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section achievements-section" id="prestasi">
+      <div class="container">
+        <div class="achievement-head">
+          <div class="section-heading reveal"><span class="eyebrow">Bangga pada proses</span><h2>Prestasi lahir dari keberanian mencoba.</h2><p>Setiap pencapaian adalah cerita tentang latihan, kerja sama, dan dukungan satu sama lain.</p></div>
+          <p>Ruang untuk berkembang tersedia bagi setiap murid, di dalam kelas maupun di luar kelas.</p>
+        </div>
+        <div class="achievement-grid">
+          <article class="achievement reveal"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80" alt="Siswa merayakan kelulusan dan prestasi" loading="lazy"><div class="achievement-content"><span class="achievement-tag">Akademik · 2025</span><h3>Finalis Olimpiade Sains Nasional</h3><p>Bidang Matematika tingkat provinsi</p></div></article>
+          <article class="achievement reveal"><img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=80" alt="Karya seni dan kreativitas murid" loading="lazy"><div class="achievement-content"><span class="achievement-tag">Kreativitas · 2025</span><h3>Juara Festival Film Pelajar</h3><p>Kategori film pendek tingkat kota</p></div></article>
+          <article class="achievement reveal"><img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80" alt="Tim olahraga sekolah berlatih bersama" loading="lazy"><div class="achievement-content"><span class="achievement-tag">Olahraga · 2024</span><h3>Juara Liga Basket Pelajar</h3><p>Kompetisi antarsekolah se-Bandung Raya</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="registration-section" id="pendaftaran">
+      <div class="container registration-grid">
+        <div class="registration-copy reveal">
+          <span class="eyebrow">Penerimaan murid baru 2026/2027</span>
+          <h2>Mulai cerita barumu bersama kami.</h2>
+          <p>Kenali lebih dekat lingkungan belajar kami. Isi formulir minat, dan tim penerimaan murid akan menghubungi untuk berbagi informasi selanjutnya.</p>
+          <div class="admission-details">
+            <div class="admission-detail"><span class="detail-symbol" aria-hidden="true">⌖</span>Jl. Pendidikan No. 12, Bandung</div>
+            <div class="admission-detail"><span class="detail-symbol" aria-hidden="true">◷</span>Senin–Jumat, pukul 08.00–15.00 WIB</div>
+            <div class="admission-detail"><span class="detail-symbol" aria-hidden="true">✉</span>penerimaan@cakrawalanusantara.sch.id</div>
+          </div>
+        </div>
+        <div class="form-panel reveal">
+          <h3>Formulir minat pendaftaran</h3>
+          <p>Lengkapi data berikut. Tim kami akan menghubungi Anda.</p>
+          <form id="registrationForm">
+            <div class="form-grid">
+              <div class="field"><label for="studentName">Nama calon murid</label><input id="studentName" name="studentName" autocomplete="name" placeholder="Nama lengkap" required></div>
+              <div class="field"><label for="parentName">Nama orang tua / wali</label><input id="parentName" name="parentName" placeholder="Nama orang tua / wali" required></div>
+              <div class="field"><label for="phone">Nomor WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="08xx xxxx xxxx" required></div>
+              <div class="field"><label for="grade">Tingkat yang dituju</label><select id="grade" name="grade" required><option value="" disabled selected>Pilih tingkat</option><option>Kelas 10</option><option>Kelas 11 (pindahan)</option><option>Kelas 12 (pindahan)</option></select></div>
+              <div class="field field-wide"><label for="email">Alamat email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="nama@email.com" required></div>
+              <div class="field field-wide"><label for="message">Catatan (opsional)</label><textarea id="message" name="message" placeholder="Hal yang ingin ditanyakan..."></textarea></div>
+            </div>
+            <button class="button form-submit" type="submit">Kirim minat pendaftaran <span aria-hidden="true">↗</span></button>
+            <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div><div class="footer-brand">SMA Cakrawala Nusantara</div><p class="footer-copy">© 2026 SMA Cakrawala Nusantara. Belajar, bertumbuh, berdampak.</p></div>
+      <div class="footer-links"><a href="#beranda">Beranda</a><a href="#sejarah">Sejarah</a><a href="#prestasi">Prestasi</a><a href="#pendaftaran">Pendaftaran</a></div>
+    </div>
+  </footer>
+  <script>
+    const menuToggle = document.querySelector('#menuToggle');
+    const navLinks = document.querySelector('#navLinks');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Tutup navigasi' : 'Buka navigasi');
+      menuToggle.querySelector('span').textContent = isOpen ? '×' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Buka navigasi');
+      menuToggle.querySelector('span').textContent = '☰';
+    }));
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
+
+    document.querySelector('#registrationForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!event.currentTarget.reportValidity()) return;
+      const studentName = document.querySelector('#studentName').value.trim();
+      const formMessage = document.querySelector('#formMessage');
+      formMessage.textContent = `Terima kasih, ${studentName}. Data minat Anda sudah tercatat di halaman ini. Hubungi sekolah untuk proses pendaftaran resmi.`;
+      formMessage.classList.add('visible');
+      event.currentTarget.reset();
+    });
+  </script>
+</body>
+</html>
