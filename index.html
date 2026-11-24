@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#315b7d">
+  <meta name="theme-color" content="#237d72">
   <meta name="description" content="Kenali TK AISYIYAH KARANGASEM 02 PACIRAN, ruang tumbuh untuk belajar, berkarya, dan meraih masa depan.">
   <title>TK AISYIYAH KARANGASEM 02 PACIRAN | Tumbuh, Berkarya, Berdampak</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,15 +11,15 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --forest: #315b7d;
-      --forest-deep: #203f60;
-      --leaf: #b8d9ef;
-      --sun: #f3c88e;
-      --paper: #f5f8fc;
-      --ink: #243746;
-      --muted: #667d90;
+      --forest: #237d72;
+      --forest-deep: #17645c;
+      --leaf: #ffd166;
+      --sun: #ff8c69;
+      --paper: #fffdf7;
+      --ink: #28443f;
+      --muted: #627873;
       --white: #fff;
-      --line: #dde7ef;
+      --line: #dce9df;
       --serif: 'Playfair Display', Georgia, serif;
       --sans: 'DM Sans', 'Segoe UI', sans-serif;
     }
@@ -31,7 +31,7 @@
     button, input, select, textarea { font: inherit; }
     button, a { -webkit-tap-highlight-color: transparent; }
     .container { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
-    .topbar { height: 36px; display: flex; align-items: center; background: var(--forest-deep); color: #e3edf5; font-size: 11px; letter-spacing: .03em; }
+    .topbar { height: 36px; display: flex; align-items: center; background: #17645c; color: #fff9e8; font-size: 11px; letter-spacing: .03em; }
     .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
     .topbar p { margin: 0; }
     .topbar a { color: var(--leaf); font-weight: 700; }
@@ -48,11 +48,11 @@
     .nav-cta { padding: 12px 17px; color: var(--white); background: var(--forest); border-radius: 4px; font-size: 11px; font-weight: 700; transition: background .2s, transform .2s; }
     .nav-cta:hover { background: var(--forest-deep); transform: translateY(-1px); }
     .menu-toggle { display: none; width: 42px; height: 42px; border: 1px solid var(--line); background: var(--white); border-radius: 4px; color: var(--forest); cursor: pointer; }
-    .hero { position: relative; min-height: 590px; display: flex; align-items: center; overflow: hidden; color: var(--white); background: #315b7d; }
-    .hero::before { position: absolute; inset: 0; content: ''; background: linear-gradient(90deg, rgba(13,40,29,.88) 0%, rgba(13,40,29,.71) 44%, rgba(13,40,29,.14) 100%), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2000&q=85') center 43%/cover; transform: scale(1.015); animation: arrive 1s ease-out both; }
+    .hero { position: relative; min-height: 590px; display: flex; align-items: center; overflow: hidden; color: var(--white); background: #237d72; }
+    .hero::before { position: absolute; inset: 0; content: ''; background: linear-gradient(90deg, rgba(23,100,92,.92) 0%, rgba(35,125,114,.68) 44%, rgba(255,209,102,.12) 100%), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2000&q=85') center 43%/cover; transform: scale(1.015); animation: arrive 1s ease-out both; }
     .hero::after { position: absolute; right: -85px; bottom: -180px; width: 470px; height: 470px; content: ''; border: 1px solid rgba(216,237,157,.25); border-radius: 50%; box-shadow: 0 0 0 40px rgba(216,237,157,.045), 0 0 0 80px rgba(216,237,157,.035); }
     .hero-content { position: relative; z-index: 1; width: min(1160px, calc(100% - 48px)); margin: 0 auto; padding: 90px 0 105px; animation: rise .75s .1s both; }
-    .eyebrow { display: flex; align-items: center; gap: 9px; color: #dff3ad; font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    .eyebrow { display: flex; align-items: center; gap: 9px; color: #fff1a9; font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
     .eyebrow::before { width: 25px; height: 1px; content: ''; background: currentColor; }
     h1, h2, h3, p { margin-top: 0; }
     .hero h1 { max-width: 650px; margin: 20px 0 19px; font-family: var(--serif); font-size: clamp(42px, 5.3vw, 68px); font-weight: 600; line-height: 1.08; }
@@ -70,27 +70,15 @@
     .strip-item { display: flex; align-items: center; gap: 13px; padding: 0 26px; border-right: 1px solid var(--line); }
     .strip-item:first-child { padding-left: 0; }
     .strip-item:last-child { padding-right: 0; border-right: 0; }
-    .strip-icon { width: 38px; height: 38px; display: grid; place-items: center; flex-shrink: 0; color: var(--forest); background: #edf5fb; border-radius: 50%; font-size: 16px; }
+    .strip-icon { width: 38px; height: 38px; display: grid; place-items: center; flex-shrink: 0; color: #17645c; background: #fff0b8; border-radius: 50%; font-size: 16px; }
     .strip-item strong { display: block; margin-bottom: 3px; font-family: var(--serif); font-size: 15px; }
     .strip-item span { color: var(--muted); font-size: 10px; }
     .section { padding: 100px 0; }
     .section-heading { max-width: 590px; margin-bottom: 43px; }
-    .section-heading .eyebrow { color: #62844e; }
+    .section-heading .eyebrow { color: #238579; }
     .section-heading h2 { margin: 14px 0 12px; font-family: var(--serif); font-size: clamp(32px, 4vw, 45px); font-weight: 600; line-height: 1.15; }
     .section-heading p { max-width: 510px; margin-bottom: 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
-    .vision-section { padding-top: 91px; }
-    .vision-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 76px; align-items: center; }
-    .vision-photo { position: relative; min-height: 440px; }
-    .vision-photo img { width: 100%; height: 440px; display: block; object-fit: cover; border-radius: 4px; }
-    .photo-caption { position: absolute; right: -22px; bottom: 24px; width: 180px; padding: 17px 19px; color: var(--white); background: var(--forest); box-shadow: 0 10px 26px rgba(16,54,41,.19); }
-    .photo-caption strong { display: block; margin-bottom: 5px; font-family: var(--serif); font-size: 25px; }
-    .photo-caption span { color: #dce8df; font-size: 10px; }
-    .vision-content .section-heading { margin-bottom: 24px; }
-    .vm-item { display: grid; grid-template-columns: 43px 1fr; gap: 14px; padding: 18px 0; border-top: 1px solid var(--line); }
-    .vm-number { color: #a4bd79; font-family: var(--serif); font-size: 20px; }
-    .vm-item h3 { margin: 2px 0 6px; font-family: var(--serif); font-size: 16px; }
-    .vm-item p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
-    .history-section { background: #edf4fa; }
+    .history-section { background: #edf8f5; }
     .history-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 80px; align-items: start; }
     .history-copy { position: sticky; top: 116px; }
     .history-copy .section-heading { margin-bottom: 25px; }
@@ -114,12 +102,13 @@
     .achievement-tag { display: inline-flex; margin-bottom: 12px; padding: 6px 9px; color: #203f60; background: var(--leaf); font-size: 9px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
     .achievement h3 { max-width: 290px; margin-bottom: 7px; font-family: var(--serif); font-size: 20px; line-height: 1.25; }
     .achievement p { margin: 0; color: rgba(255,255,255,.75); font-size: 10px; }
-    .activity-section { background: #edf4fa; }
-    .activity-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .activity-photo { min-height: 300px; overflow: hidden; background: var(--white); border-radius: 4px; }
-    .activity-photo img { width: 100%; height: 300px; display: block; object-fit: cover; transition: transform .45s ease; }
+    .activity-section { background: #edf8f5; }
+    .activity-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+    .activity-photo { width: 100%; aspect-ratio: 16 / 9; min-height: 0; overflow: hidden; background: var(--white); border-radius: 4px; }
+    .activity-photo img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .45s ease; }
     .activity-photo:hover img { transform: scale(1.035); }
-    .registration-section { padding: 94px 0; color: var(--white); background: var(--forest-deep); }
+    .registration-section { position: relative; isolation: isolate; overflow: hidden; padding: 94px 0; color: var(--white); background: var(--forest-deep) url('josjis.png') center / cover no-repeat; }
+    .registration-section::before { content: ''; position: absolute; inset: 0; z-index: -1; background: rgba(23, 100, 92, .78); }
     .registration-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 80px; align-items: start; }
     .registration-copy .eyebrow { color: var(--leaf); }
     .registration-copy h2 { margin: 16px 0; font-family: var(--serif); font-size: clamp(33px, 4vw, 46px); font-weight: 600; line-height: 1.14; }
@@ -134,13 +123,13 @@
     .field { display: grid; gap: 6px; }
     .field-wide { grid-column: 1 / -1; }
     .field label { color: #49564f; font-size: 10px; font-weight: 700; }
-    .field input, .field select, .field textarea { width: 100%; min-height: 42px; padding: 10px 11px; color: var(--ink); border: 1px solid #d9e4ed; border-radius: 3px; outline: none; background: #fbfdff; font-size: 11px; }
+    .field input, .field select, .field textarea { width: 100%; min-height: 42px; padding: 10px 11px; color: var(--ink); border: 1px solid #d5e7dc; border-radius: 3px; outline: none; background: #fffefa; font-size: 11px; }
     .field textarea { min-height: 72px; resize: vertical; }
     .field input:focus, .field select:focus, .field textarea:focus { border-color: #6e9cbf; box-shadow: 0 0 0 3px rgba(110,156,191,.12); }
     .form-submit { width: 100%; margin-top: 17px; color: var(--forest-deep); background: var(--leaf); cursor: pointer; }
     .form-message { display: none; margin: 13px 0 0; padding: 11px; color: #315b7d; background: #edf5fb; font-size: 11px; line-height: 1.6; }
     .form-message.visible { display: block; }
-    footer { padding: 28px 0; color: #d3e3ef; background: #183753; }
+    footer { padding: 28px 0; color: #effaf6; background: #17645c; }
     .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
     .footer-brand { font-family: var(--serif); font-size: 14px; }
     .footer-copy { margin: 4px 0 0; color: #9fb3a5; font-size: 9px; }
@@ -170,10 +159,7 @@
       .strip-item, .strip-item:first-child, .strip-item:last-child { padding: 15px 0; border-right: 0; border-bottom: 1px solid var(--line); }
       .strip-item:last-child { border-bottom: 0; }
       .section { padding: 76px 0; }
-      .vision-grid, .history-grid, .registration-grid { grid-template-columns: 1fr; gap: 42px; }
-      .vision-photo { min-height: 330px; }
-      .vision-photo img { height: 330px; }
-      .photo-caption { right: -7px; }
+      .history-grid, .registration-grid { grid-template-columns: 1fr; gap: 42px; }
       .history-copy { position: static; }
       .achievement-head { display: block; }
       .achievement-head > p { max-width: 450px; margin: -20px 0 30px; }
@@ -201,14 +187,10 @@
       .section { padding: 65px 0; }
       .section-heading { margin-bottom: 31px; }
       .section-heading h2 { font-size: 34px; }
-      .vision-photo { min-height: 275px; }
-      .vision-photo img { height: 275px; }
-      .photo-caption { width: 150px; padding: 13px; }
-      .photo-caption strong { font-size: 22px; }
       .achievement-grid { grid-template-columns: 1fr; gap: 12px; }
       .achievement { min-height: 280px; }
       .activity-grid { grid-template-columns: 1fr; gap: 12px; }
-      .activity-photo, .activity-photo img { min-height: 280px; height: 280px; }
+      .activity-photo, .activity-photo img { min-height: 0; height: 100%; }
       .form-panel { padding: 21px 17px; }
       .form-grid { grid-template-columns: 1fr; }
       .field-wide { grid-column: auto; }
@@ -250,8 +232,8 @@
     <section class="hero" id="beranda" aria-label="TK AISYIYAH KARANGASEM 02 PACIRAN">
       <div class="hero-content">
         <span class="eyebrow">Taman Kanak-Kanak · Paciran</span>
-        <h1>Ruang untuk tumbuh,<br><em>berani bermimpi.</em></h1>
-        <p class="hero-copy">Kami percaya setiap anak punya cahaya yang berbeda. Di sini, murid dan guru belajar bersama untuk mengenali potensi, berkarya dengan percaya diri, dan memberi arti bagi sekitar.</p>
+        <h1>Generasi Qur’ani,<br><em>aktif, kreatif, dan berkarakter.</em></h1>
+        <p class="hero-copy">Visi: mencetak generasi Qur’ani yang aktif, kreatif, inovatif, berkarakter, serta berwawasan digital.<br>Misi: menanamkan jiwa Qur’ani, menerapkan pembelajaran saintifik, membiasakan 9 Pilar pendidikan karakter, dan melaksanakan pembelajaran berbasis digital.</p>
         <div class="hero-actions">
           <a class="button button-light" href="#pendaftaran">Jelajahi pendaftaran <span aria-hidden="true">↗</span></a>
           <a class="button button-outline" href="#sejarah">Kenali sekolah kami</a>
@@ -268,25 +250,6 @@
       </div>
     </div>
 
-    <section class="section vision-section" id="visi-misi">
-      <div class="container vision-grid">
-        <div class="vision-photo reveal">
-          <img src="rg.jpeg" alt="Murid belajar bersama guru di TK AISYIYAH KARANGASEM 02 PACIRAN" loading="lazy">
-          <div class="photo-caption"><strong>49</strong><span>Murid belajar dan berkarya bersama</span></div>
-        </div>
-        <div class="vision-content reveal">
-          <div class="section-heading">
-            <span class="eyebrow">Profil lembaga</span>
-            <h2>Bertumbuh dalam keluarga Aisyiyah sejak 1983.</h2>
-            <p>TK AISYIYAH KARANGASEM 02 PACIRAN melayani anak usia dini dengan pengelolaan sekolah swasta milik sendiri dan telah terakreditasi A.</p>
-          </div>
-          <div class="vm-item"><span class="vm-number">01</span><div><h3>Identitas lembaga</h3><p>NPSN 20567426. TK berstatus swasta, terakreditasi A, dan berdiri pada 18 Juli 1983.</p></div></div>
-          <div class="vm-item"><span class="vm-number">02</span><div><h3>Pimpinan lembaga</h3><p>Kepala sekolah: Maskhuba Imaniyah, S.Pd.I. Sekolah bertempat di Jl. Ki Darsono, Rt.04/Rw.04, Kecamatan Paciran, Lamongan 62264.</p></div></div>
-          <div class="vm-item"><span class="vm-number">03</span><div><h3>Jejak Aisyiyah</h3><p>Berdasarkan sejarah lembaga, pendidikan Aisyiyah tumbuh dari organisasi perempuan Muhammadiyah dan memperkenalkan pendidikan anak usia pra-sekolah sejak 1919.</p></div></div>
-        </div>
-      </div>
-    </section>
-
     <section class="section history-section" id="sejarah">
       <div class="container history-grid">
         <div class="history-copy reveal">
@@ -295,7 +258,6 @@
             <h2>Sejarah lahir dan tumbuhnya pendidikan Aisyiyah.</h2>
             <p>Profil ini merangkum perjalanan Aisyiyah sebagai organisasi perempuan Muhammadiyah dan berdirinya TK AISYIYAH KARANGASEM 02 PACIRAN.</p>
           </div>
-          <a class="button" href="#prestasi">Lihat kegiatan lembaga <span aria-hidden="true">→</span></a>
         </div>
         <div class="timeline reveal" aria-label="Linimasa sejarah sekolah">
           <article class="timeline-item"><time datetime="1917">1917</time><h3>Aisyiyah berdiri</h3><p>Aisyiyah didirikan di Yogyakarta pada 19 Mei 1917 Masehi, bertepatan dengan 27 Rajab 1335 Hijriyah, sebagai komponen perempuan dalam Persyarikatan Muhammadiyah.</p></article>
@@ -329,8 +291,6 @@
         </div>
         <div class="activity-grid">
           <figure class="activity-photo reveal"><img src="titut.jpeg" alt="Kegiatan anak TK AISYIYAH KARANGASEM 02 PACIRAN" loading="lazy"></figure>
-          <figure class="activity-photo reveal"><img src="titut.jpeg" alt="Kegiatan anak TK AISYIYAH KARANGASEM 02 PACIRAN" loading="lazy"></figure>
-          <figure class="activity-photo reveal"><img src="titut.jpeg" alt="Kegiatan anak TK AISYIYAH KARANGASEM 02 PACIRAN" loading="lazy"></figure>
         </div>
       </div>
     </section>
@@ -343,8 +303,8 @@
           <p>Kenali lebih dekat lingkungan belajar kami. Isi formulir minat, dan tim penerimaan murid akan menghubungi untuk berbagi informasi selanjutnya.</p>
           <div class="admission-details">
             <div class="admission-detail"><span class="detail-symbol" aria-hidden="true">⌖</span>Jl. Ki Darsono Rt.04/Rw.04, Paciran 62264</div>
-            <div class="admission-detail"><span class="detail-symbol" aria-hidden="true">◷</span>Senin–Jumat, pukul 08.00–15.00 WIB</div>
-            <div class="admission-detail"><span class="detail-symbol" aria-hidden="true">✉</span>tkaisyiyahkarangasem02@gmail.com</div>
+            <div class="admission-detail"><span class="detail-symbol" aria-hidden="true">☎</span><a href="tel:+6285732573989">+62 857-3257-3989</a></div>
+            <div class="admission-detail"><span class="detail-symbol" aria-hidden="true">◎</span><a href="https://instagram.com/paudkarangasem02" target="_blank" rel="noopener">@paudkarangasem02</a></div>
           </div>
         </div>
         <div class="form-panel reveal">
@@ -355,9 +315,8 @@
               <div class="field"><label for="studentName">Nama calon murid</label><input id="studentName" name="studentName" autocomplete="name" placeholder="Nama lengkap" required></div>
               <div class="field"><label for="parentName">Nama orang tua / wali</label><input id="parentName" name="parentName" placeholder="Nama orang tua / wali" required></div>
               <div class="field"><label for="phone">Nomor WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="08xx xxxx xxxx" required></div>
-              <div class="field"><label for="grade">Tingkat yang dituju</label><select id="grade" name="grade" required><option value="" disabled selected>Pilih tingkat</option><option>Kelas 10</option><option>Kelas 11 (pindahan)</option><option>Kelas 12 (pindahan)</option></select></div>
+              <div class="field"><label for="grade">Tingkat yang dituju</label><select id="grade" name="grade" required><option value="" disabled selected>Pilih tingkat</option><option>PAUD</option><option>TK A</option><option>TK B</option></select></div>
               <div class="field field-wide"><label for="email">Alamat email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="nama@email.com" required></div>
-              <div class="field field-wide"><label for="message">Catatan (opsional)</label><textarea id="message" name="message" placeholder="Hal yang ingin ditanyakan..."></textarea></div>
             </div>
             <button class="button form-submit" type="submit">Kirim minat pendaftaran <span aria-hidden="true">↗</span></button>
             <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
