@@ -49,7 +49,7 @@
     .nav-cta:hover { background: var(--forest-deep); transform: translateY(-1px); }
     .menu-toggle { display: none; width: 42px; height: 42px; border: 1px solid var(--line); background: var(--white); border-radius: 4px; color: var(--forest); cursor: pointer; }
     .hero { position: relative; min-height: 590px; display: flex; align-items: center; overflow: hidden; color: var(--white); background: #237d72; }
-    .hero::before { position: absolute; inset: 0; content: ''; background: linear-gradient(90deg, rgba(23,100,92,.92) 0%, rgba(35,125,114,.68) 44%, rgba(255,209,102,.12) 100%), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2000&q=85') center 43%/cover; transform: scale(1.015); animation: arrive 1s ease-out both; }
+    .hero::before { position: absolute; inset: 0; content: ''; background: linear-gradient(90deg, rgba(23,100,92,.92) 0%, rgba(35,125,114,.68) 44%, rgba(255,209,102,.12) 100%), url('sklh.jpeg') center 43%/cover; transform: scale(1.015); animation: arrive 1s ease-out both; }
     .hero::after { position: absolute; right: -85px; bottom: -180px; width: 470px; height: 470px; content: ''; border: 1px solid rgba(216,237,157,.25); border-radius: 50%; box-shadow: 0 0 0 40px rgba(216,237,157,.045), 0 0 0 80px rgba(216,237,157,.035); }
     .hero-content { position: relative; z-index: 1; width: min(1160px, calc(100% - 48px)); margin: 0 auto; padding: 90px 0 105px; animation: rise .75s .1s both; }
     .eyebrow { display: flex; align-items: center; gap: 9px; color: #fff1a9; font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
@@ -102,6 +102,20 @@
     .achievement-tag { display: inline-flex; margin-bottom: 12px; padding: 6px 9px; color: #203f60; background: var(--leaf); font-size: 9px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
     .achievement h3 { max-width: 290px; margin-bottom: 7px; font-family: var(--serif); font-size: 20px; line-height: 1.25; }
     .achievement p { margin: 0; color: rgba(255,255,255,.75); font-size: 10px; }
+    .environment-section { background: var(--paper); }
+    .environment-carousel { position: relative; }
+    .environment-track { display: flex; overflow: hidden; scroll-snap-type: x mandatory; scrollbar-width: none; scroll-behavior: smooth; }
+    .environment-track::-webkit-scrollbar { display: none; }
+    .environment-slot { position: relative; flex: 0 0 100%; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #edf4ef; border: 1px solid var(--line); border-radius: 4px; scroll-snap-align: start; scroll-snap-stop: always; cursor: zoom-in; }
+    .environment-slot img { width: 100%; height: 100%; display: block; object-fit: cover; }
+    .environment-slot:hover img { filter: brightness(.97); }
+    .environment-controls { display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+    .environment-arrow { width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid #b8cec2; border-radius: 50%; color: var(--forest); background: var(--white); font-size: 20px; cursor: pointer; transition: background .2s, color .2s, transform .2s; }
+    .environment-arrow:hover { color: var(--white); background: var(--forest); transform: translateY(-2px); }
+    .environment-lightbox { position: fixed; inset: 0; z-index: 100; display: none; align-items: center; justify-content: center; padding: 28px; background: rgba(10,38,32,.92); }
+    .environment-lightbox.open { display: flex; }
+    .environment-lightbox img { max-width: 94vw; max-height: 88vh; width: auto; height: auto; object-fit: contain; border-radius: 4px; box-shadow: 0 18px 50px rgba(0,0,0,.28); }
+    .lightbox-close { position: absolute; top: 18px; right: 18px; width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.5); border-radius: 50%; color: var(--white); background: transparent; font-size: 24px; cursor: pointer; }
     .activity-section { background: #edf8f5; }
     .activity-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
     .activity-photo { width: 100%; aspect-ratio: 16 / 9; min-height: 0; overflow: hidden; background: var(--white); border-radius: 4px; }
@@ -177,7 +191,7 @@
       .brand-copy strong { max-width: 190px; font-size: 11px; }
       .brand-copy small { font-size: 8px; }
       .hero { min-height: 555px; }
-      .hero::before { background-image: linear-gradient(90deg, rgba(13,40,29,.88), rgba(13,40,29,.48)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80'); background-position: 55% center; }
+      .hero::before { background-image: linear-gradient(90deg, rgba(13,40,29,.88), rgba(13,40,29,.48)), url('sklh.jpeg'); background-position: 55% center; }
       .hero-content { width: calc(100% - 36px); padding: 68px 0 90px; }
       .hero h1 { margin-top: 17px; font-size: 43px; }
       .hero-copy { font-size: 12px; }
@@ -220,6 +234,7 @@
         <a href="#beranda">Beranda</a>
         <a href="#sejarah">Sejarah</a>
         <a href="#prestasi">Prestasi</a>
+        <a href="#lingkungan">Lingkungan</a>
         <a href="#kegiatan">Kegiatan</a>
         <a href="#pendaftaran">Pendaftaran</a>
       </div>
@@ -282,6 +297,40 @@
       </div>
     </section>
 
+    <section class="section environment-section" id="lingkungan">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Ruang nyaman untuk tumbuh bersama.</h2>
+          <p>Area bermain, ruang belajar, dan suasana sekolah yang mendukung anak aktif, aman, dan bahagia.</p>
+        </div>
+        <div class="environment-carousel reveal">
+          <div class="environment-track" id="environmentTrack">
+          <figure class="environment-slot"><img src="1.jpeg" alt="Lingkungan sekolah foto 1" loading="lazy"></figure>
+          <figure class="environment-slot"><img src="2.jpeg" alt="Lingkungan sekolah foto 2" loading="lazy"></figure>
+          <figure class="environment-slot"><img src="3.jpeg" alt="Lingkungan sekolah foto 3" loading="lazy"></figure>
+          <figure class="environment-slot"><img src="4.jpeg" alt="Lingkungan sekolah foto 4" loading="lazy"></figure>
+          <figure class="environment-slot"><img src="5.jpeg" alt="Lingkungan sekolah foto 5" loading="lazy"></figure>
+          <figure class="environment-slot"><img src="6.jpeg" alt="Lingkungan sekolah foto 6" loading="lazy"></figure>
+          <figure class="environment-slot"><img src="7.jpeg" alt="Lingkungan sekolah foto 7" loading="lazy"></figure>
+          <figure class="environment-slot"><img src="8.jpeg" alt="Lingkungan sekolah foto 8" loading="lazy"></figure>
+          <figure class="environment-slot"><img src="9.jpeg" alt="Lingkungan sekolah foto 9" loading="lazy"></figure>
+          <figure class="environment-slot"><img src="10.jpeg" alt="Lingkungan sekolah foto 10" loading="lazy"></figure>
+          <figure class="environment-slot"><img src="11.jpeg" alt="Lingkungan sekolah foto 11" loading="lazy"></figure>
+          <figure class="environment-slot"><img src="12.jpeg" alt="Lingkungan sekolah foto 12" loading="lazy"></figure>
+          <figure class="environment-slot"><img src="13.jpeg" alt="Lingkungan sekolah foto 13" loading="lazy"></figure>
+          </div>
+          <div class="environment-controls" aria-label="Kontrol galeri lingkungan">
+            <button class="environment-arrow" id="environmentPrev" type="button" aria-label="Foto sebelumnya">←</button>
+            <button class="environment-arrow" id="environmentNext" type="button" aria-label="Foto berikutnya">→</button>
+          </div>
+        </div>
+        <div class="environment-lightbox" id="environmentLightbox" role="dialog" aria-modal="true" aria-label="Foto lingkungan sekolah">
+          <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Tutup foto">×</button>
+          <img id="lightboxImage" src="" alt="Foto lingkungan sekolah diperbesar">
+        </div>
+      </div>
+    </section>
+
     <section class="section activity-section" id="kegiatan">
       <div class="container">
         <div class="section-heading reveal">
@@ -329,7 +378,7 @@
   <footer>
     <div class="container footer-inner">
       <div><div class="footer-brand">TK AISYIYAH KARANGASEM 02 PACIRAN</div><p class="footer-copy">© 2026 TK AISYIYAH KARANGASEM 02 PACIRAN. Belajar, bertumbuh, berdampak.</p></div>
-      <div class="footer-links"><a href="#beranda">Beranda</a><a href="#sejarah">Sejarah</a><a href="#prestasi">Prestasi</a><a href="#kegiatan">Kegiatan</a><a href="#pendaftaran">Pendaftaran</a></div>
+      <div class="footer-links"><a href="#beranda">Beranda</a><a href="#sejarah">Sejarah</a><a href="#prestasi">Prestasi</a><a href="#lingkungan">Lingkungan</a><a href="#kegiatan">Kegiatan</a><a href="#pendaftaran">Pendaftaran</a></div>
     </div>
   </footer>
   <script>
@@ -357,6 +406,42 @@
       });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
+
+    const environmentTrack = document.querySelector('#environmentTrack');
+    const environmentPrev = document.querySelector('#environmentPrev');
+    const environmentNext = document.querySelector('#environmentNext');
+    const environmentLightbox = document.querySelector('#environmentLightbox');
+    const lightboxImage = document.querySelector('#lightboxImage');
+    const lightboxClose = document.querySelector('#lightboxClose');
+
+    const scrollEnvironment = (direction) => {
+      const firstSlot = environmentTrack.querySelector('.environment-slot');
+      const maxLeft = environmentTrack.scrollWidth - environmentTrack.clientWidth;
+      const nextLeft = Math.max(0, Math.min(maxLeft, environmentTrack.scrollLeft + direction * firstSlot.getBoundingClientRect().width));
+      environmentTrack.scrollTo({ left: nextLeft, behavior: 'smooth' });
+    };
+    environmentPrev.addEventListener('click', () => scrollEnvironment(-1));
+    environmentNext.addEventListener('click', () => scrollEnvironment(1));
+
+    environmentTrack.querySelectorAll('.environment-slot img').forEach((image) => {
+      image.addEventListener('click', () => {
+        lightboxImage.src = image.currentSrc || image.src;
+        lightboxImage.alt = image.alt;
+        environmentLightbox.classList.add('open');
+        lightboxClose.focus();
+      });
+    });
+    const closeLightbox = () => {
+      environmentLightbox.classList.remove('open');
+      lightboxImage.src = '';
+    };
+    lightboxClose.addEventListener('click', closeLightbox);
+    environmentLightbox.addEventListener('click', (event) => {
+      if (event.target === environmentLightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeLightbox();
+    });
 
     document.querySelector('#registrationForm').addEventListener('submit', (event) => {
       event.preventDefault();
